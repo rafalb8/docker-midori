@@ -7,9 +7,6 @@ on:
       - 'main'
     tags:
       - 'latest'
-  pull_request:
-    branches:
-      - 'main'
 
 permissions: 
   contents: read
@@ -50,7 +47,7 @@ jobs:
           tags: |
             type=edge,branch=main
             type=ref,event=branch
-            type=ref,event=pr
+            type=ref,event=tag
             type=sha
             
       - name: Build and push
