@@ -1,0 +1,8 @@
+version: "2.1"
+services:
+  midori:
+    image: ghcr.io/rafalb8/docker-midori:latest
+    restart: unless-stopped
+    container_name: midori
+    ports:
+      - 5901:5901
